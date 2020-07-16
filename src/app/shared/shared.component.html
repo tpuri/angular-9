@@ -1,0 +1,8 @@
+<div *ngIf = "!hideMe"> 
+
+  <button  (click) = "resetLoginForm()" *ngIf = "isFormValid; else message" >reset Login Form</button>
+  <ng-template #message>
+    <button *ngIf= "isSubmitButtonClicked" type = "button" (click) = "patchFormValues()">AutoFil Form</button>
+  </ng-template>
+
+</div>
